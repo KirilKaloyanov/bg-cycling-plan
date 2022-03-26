@@ -1,11 +1,17 @@
 const Input = ({ name, type, label, errors, ...rest }) => {
   return (
-    <div className="">
-      <label htmlFor={name} className="">
-        {label}
-      </label>
-      <input {...rest} id={name} name={name} type={type} className="" />
-      {errors[name] && <div className="">{errors[name]}</div>}
+    <div className="form_field_container">
+      <h3 className="input_label">
+        <label htmlFor={name}>{label}</label>
+      </h3>
+      <input
+        {...rest}
+        id={name}
+        name={name}
+        type={type}
+        className="input_field"
+      />
+      {errors[name] && <div className="input_error">{errors[name]}</div>}
     </div>
   );
 };

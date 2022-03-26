@@ -1,6 +1,6 @@
 import http from "./http";
 
-const apiEndpoint = "/participants";
+const apiEndpoint = "/api/participants";
 
 export function getParticipants() {
   return http.get(apiEndpoint);

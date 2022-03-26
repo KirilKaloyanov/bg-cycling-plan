@@ -409,6 +409,31 @@ a {
   text-decoration-thickness: 1px;
 }
 
+/*  FORM  */ /*  FORM  */ /*  FORM  */ /*  FORM  */ /*  FORM  */
+
+.form_container {
+  width: 48rem;
+  margin: auto;
+}
+
+.form_field_container {
+  display: grid;
+  margin: 2rem 0;
+}
+
+.input_field {
+  height: 3rem;
+  font-family: "Montserrat";
+}
+
+.input_label {
+  margin: 0;
+}
+
+.input_error {
+  color: red;
+}
+
 /*  FOOTER  */ /*  FOOTER  */ /*  FOOTER  */ /*  FOOTER  */
 
 .dtpLogo {

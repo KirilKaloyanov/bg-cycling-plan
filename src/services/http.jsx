@@ -1,3 +1,6 @@
 import axios from "axios";
 
-export default http = { get: axios.get, post: axios.post };
+axios.defaults.baseURL = "http://localhost:3001";
+
+const http = { get: axios.get, post: axios.post };
+export default http;
