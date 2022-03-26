@@ -58,6 +58,7 @@ a {
 
 .btn_arrow:hover {
   cursor: pointer;
+  background-color: grey;
 }
 
 /*  NAVBAR  */ /*  NAVBAR  */ /*  NAVBAR  */ /*  NAVBAR  */ /*  NAVBAR  */ /*  NAVBAR  */

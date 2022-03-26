@@ -6,6 +6,7 @@ import Page from "./components/page";
 import NavBack from "./components/common/navback";
 import Map from "./components/map";
 import Partners from "./components/partners";
+import Conference from "./components/conference";
 import dtpLogo from "./components/images/logoDTP.png";
 
 class App extends React.Component {
@@ -64,6 +65,15 @@ class App extends React.Component {
             }
           />
           <Route
+            path="map"
+            element={
+              <>
+                <NavBack toggle={toggle} />
+                <Map />
+              </>
+            }
+          />
+          <Route
             path="partners"
             element={
               <>
@@ -73,11 +83,11 @@ class App extends React.Component {
             }
           />
           <Route
-            path="map"
+            path="conference"
             element={
               <>
                 <NavBack toggle={toggle} />
-                <Map />
+                <Conference />
               </>
             }
           />

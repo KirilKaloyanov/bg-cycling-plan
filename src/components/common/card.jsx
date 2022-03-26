@@ -1,6 +1,6 @@
 import iconPresentation from "./iconPresentation";
 
-const card = ({ link, title, author, ...rest }) => {
+const card = ({ link, title, author }) => {
   return (
     <a className="card_link" href={link} target="_blank" rel="noreferrer">
       <div className="card">
