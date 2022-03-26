@@ -1,11 +1,9 @@
 import React, { Fragment } from "react";
-import iconPresentation from "./common/iconPresentation";
 import plan from "./images/plan.jpg";
 import masterPlan from "./images/masterPlan.jpg";
 import Card from "./common/card";
 
 export default function Page() {
-  let icon = iconPresentation;
   return (
     <Fragment>
       <div className="grid grid--1x2 quote_background_color">
