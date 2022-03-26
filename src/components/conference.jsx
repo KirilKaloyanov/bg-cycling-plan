@@ -39,9 +39,9 @@ class Conference extends Component {
 
   handleChange = ({ currentTarget: input }) => {
     let errors = { ...this.state.errors };
-    //const errorKey = this.validateProperty(input);
-    //if (errorKey) errors = this.translateErrorMessage(errors, errorKey);
-    //else delete errors[input.name];
+    const errorKey = this.validateProperty(input);
+    if (errorKey) errors = this.translateErrorMessage(errors, errorKey);
+    else delete errors[input.name];
 
     let account = { ...this.state.account };
     account[input.name] = input.value;
@@ -56,8 +56,7 @@ class Conference extends Component {
     let errors = {};
     if (result.error) {
       for (let item of result.error.details) {
-        const i = item.path[0];
-        errors = this.translateErrorMessage(errors, i);
+        errors = this.translateErrorMessage(errors, item.path[0]);
       }
     }
     return errors;
@@ -68,63 +67,45 @@ class Conference extends Component {
     let errors = this.validate();
     this.setState({ errors: errors || {} });
     if (errors) return;
+
     const { data } = await registerParticipant(this.state.account);
-    if (data.errors) {
-      for (let item in data.errors) {
-        const i = item;
-        errors = this.translateErrorMessage(errors, i);
+    {
+      //    VALIDATION FROM THE SERVER
+      let errors = {};
+      if (data.errors) {
+        for (let item in data.errors) {
+          errors = this.translateErrorMessage(errors, item);
+        }
       }
+      this.setState({ errors: errors || {} });
     }
-    this.setState({ errors: errors || {} });
   };
 
-  renderSubmitButtonClasses = () => {
-    return this.validate() ? "btn_arrow btn_disabled" : "btn_arrow";
+  renderInput = (name, label, value) => {
+    return (
+      <Input
+        name={name}
+        type="text"
+        label={label}
+        value={value}
+        onChange={this.handleChange}
+        errors={this.state.errors}
+      />
+    );
   };
 
   render() {
+    const { firstName, lastName, email, organisation } = this.state.account;
     return (
       <div className="form_container">
         <h2 className="align_center">Национална велосипедна конференция</h2>
         <h3 className="align_center">форма за регистрация</h3>
         <form onSubmit={this.handleSubmit}>
-          <Input
-            name="firstName"
-            type="text"
-            label="Име"
-            value={this.state.account.firstName}
-            onChange={this.handleChange}
-            errors={this.state.errors}
-          />
-          <Input
-            name="lastName"
-            type="text"
-            label="Фамилия"
-            value={this.state.account.lastName}
-            onChange={this.handleChange}
-            errors={this.state.errors}
-          />
-          <Input
-            name="email"
-            type="text"
-            label="Е-mail"
-            value={this.state.account.email}
-            onChange={this.handleChange}
-            errors={this.state.errors}
-          />
-          <Input
-            name="organisation"
-            type="text"
-            label="Организация"
-            value={this.state.account.organisation}
-            onChange={this.handleChange}
-            errors={this.state.errors}
-          />
-          <button
-            type="submit"
-            //disabled={this.validate()}
-            className={this.renderSubmitButtonClasses()}
-          >
+          {this.renderInput("firstName", "Име", firstName)}
+          {this.renderInput("lastName", "Фамилия", lastName)}
+          {this.renderInput("email", "E-mail", email)}
+          {this.renderInput("organisation", "Организация", organisation)}
+          <button type="submit" className="btn_arrow">
             Регистрирай се
           </button>
         </form>
