@@ -66,17 +66,20 @@ class Conference extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    let errors = this.validate();
-    this.setState({ errors: errors || {} });
-    if (errors) return;
+    // let errors = this.validate();
+    // this.setState({ errors: errors || {} });
+    // if (errors) return;
 
-    const { data } = await registerParticipant(this.state.account);
+    try {
+      const { data } = await registerParticipant(this.state.account);
+      console.log(data);
+    } catch (ex) {
+      console.log(ex.response);
 
-    {
       //    VALIDATION FROM THE SERVER
       let errors = {};
-      if (data.errors) {
-        for (let item in data.errors) {
+      if (ex.response && ex.response.status === 400) {
+        for (let item in ex.response.data.errors) {
           errors = this.translateErrorMessage(errors, item);
         }
       }
