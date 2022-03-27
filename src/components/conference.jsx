@@ -23,6 +23,8 @@ class Conference extends Component {
 
   translateErrorMessage = (errors, i) => {
     if (i === "email") errors[i] = "Моля, въведете валиден e-mail.";
+    else if (i === "emailRegistered")
+      errors.email = "Този e-mail вече е регистриран.";
     else if (i === "organisation")
       errors[i] =
         "Моля, въведете организация или интересите, които Ви мотивират да участвате.";
@@ -69,6 +71,7 @@ class Conference extends Component {
     if (errors) return;
 
     const { data } = await registerParticipant(this.state.account);
+
     {
       //    VALIDATION FROM THE SERVER
       let errors = {};
