@@ -12,6 +12,7 @@ class Conference extends Component {
       organisation: "",
     },
     errors: {},
+    registrationId: "",
   };
 
   schema = {
@@ -19,6 +20,23 @@ class Conference extends Component {
     lastName: Joi.string().required().max(30),
     email: Joi.string().email().max(96),
     organisation: Joi.string().max(256),
+  };
+
+  componentDidMount() {
+    const registrationId = localStorage.getItem("registrationId");
+    this.setState({ registrationId });
+  }
+
+  handleNewRegistration = () => {
+    localStorage.removeItem("registrationId");
+    const account = {
+      firstName: "",
+      lastName: "",
+      email: "",
+      organisation: "",
+    };
+    const registrationId = "";
+    this.setState({ account, registrationId });
   };
 
   translateErrorMessage = (errors, i) => {
@@ -66,17 +84,18 @@ class Conference extends Component {
 
   handleSubmit = async (e) => {
     e.preventDefault();
-    // let errors = this.validate();
-    // this.setState({ errors: errors || {} });
-    // if (errors) return;
+    let errors = this.validate();
+    this.setState({ errors: errors || {} });
+    if (errors) return;
 
     try {
       const { data } = await registerParticipant(this.state.account);
-      console.log(data);
-    } catch (ex) {
-      console.log(ex.response);
+      let registrationId = this.state.registrationId;
+      registrationId = data;
+      this.setState({ registrationId });
 
-      //    VALIDATION FROM THE SERVER
+      localStorage.setItem("registrationId", registrationId);
+    } catch (ex) {
       let errors = {};
       if (ex.response && ex.response.status === 400) {
         for (let item in ex.response.data.errors) {
@@ -105,16 +124,39 @@ class Conference extends Component {
     return (
       <div className="form_container">
         <h2 className="align_center">Национална велосипедна конференция</h2>
-        <h3 className="align_center">форма за регистрация</h3>
-        <form onSubmit={this.handleSubmit}>
-          {this.renderInput("firstName", "Име", firstName)}
-          {this.renderInput("lastName", "Фамилия", lastName)}
-          {this.renderInput("email", "E-mail", email)}
-          {this.renderInput("organisation", "Организация", organisation)}
-          <button type="submit" className="btn_arrow">
-            Регистрирай се
-          </button>
-        </form>
+        <div className="text text_block">
+          <br />
+          През м. октомври 2022 ще се проведе Национална велосипедна
+          конференция. На нея ще бъдат обсъдени Националния велосипеден план и
+          Схемата на Национална мрежа от велосипедни маршрути. <br />
+          <br />
+          Можете да се регистрирате за участие в конференцията като попълните
+          формата за участие. На посочен от Вас e-mail ще получите актуална
+          информация относно дата и мястото на провеждане, програмата и
+          лекторите на събитието.
+        </div>
+        {this.state.registrationId && (
+          <div>
+            <h3 className="align_center">
+              Вие сте регистрирани за конференцията.
+            </h3>
+            <button className="btn_arrow" onClick={this.handleNewRegistration}>
+              Нова регистрация
+            </button>
+          </div>
+        )}
+        {!this.state.registrationId && (
+          <form onSubmit={this.handleSubmit}>
+            <h3 className="align_center">форма за регистрация</h3>
+            {this.renderInput("firstName", "Име", firstName)}
+            {this.renderInput("lastName", "Фамилия", lastName)}
+            {this.renderInput("email", "E-mail", email)}
+            {this.renderInput("organisation", "Организация", organisation)}
+            <button type="submit" className="btn_arrow">
+              Регистрирай се
+            </button>
+          </form>
+        )}
       </div>
     );
   }
