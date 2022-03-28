@@ -4,6 +4,7 @@ import masterPlan from "./images/masterPlan.jpg";
 import Card from "./common/card";
 
 export default function Page() {
+  const baatUrl = "https://baatbg.org/uploads/docs/DCP3-320-3.1/";
   return (
     <Fragment>
       <div className="grid grid--1x2 quote_background_color">
@@ -93,86 +94,79 @@ export default function Page() {
         <h2 className="section heading">
           Презентации от срещите на работната група
         </h2>
+        <h3 className="date">25 ноември 2021</h3>
+        <h3 className="meeting_heading">
+          Визия на Национален велосипеден план
+        </h3>
+        <div className="card_container">
+          <Card
+            link={baatUrl + "NCWG3/BYPAD.pdf"}
+            author="Радостина Петрова"
+            title="Одит на велосипедни политики по метода BYPAD"
+          />
+          <Card
+            link={baatUrl + "NCWG3/vision.pdf"}
+            author="арх. Петя Донева"
+            title="Визия за политики за велосипеден транспорт, туризъм и спорт"
+          />
+          <Card
+            link={baatUrl + "NCWG3/velo.pdf"}
+            author="Радостина Петрова"
+            title="Примери за велосипедна инфарструктура извън урбанизирани територии в България"
+          />
+        </div>
+        <hr />
+        <h3 className="date">29 юни 2021</h3>
+        <h3 className="meeting_heading">
+          Велосипедни политики в страните от Дунавския регион
+        </h3>
+        <div className="card_container">
+          <Card
+            link={baatUrl + "NCWG2/Status.pdf"}
+            author="Радостина Петрова"
+            title="Настоящи велополитики в България и в партньорските страни"
+          />
+          <Card
+            link={baatUrl + "NCWG2/Slovenia.pdf"}
+            author="Gregor Steklačič"
+            title="Slovenia: Cycling development in the last 10 years"
+          />
+          <Card
+            link={baatUrl + "NCWG2/Hungary.pdf"}
+            author="Miklòs Berencsi"
+            title="Cycling governance, infrastructure, tourism and funding in Hungary"
+          />
+          <Card
+            link={baatUrl + "NCWG2/SUB.pdf"}
+            author="Васил Маджирски"
+            title="Национална схема на велосипедни маршрути"
+          />
+        </div>
+        <hr />
         <h3 className="date">24 ноември 2020</h3>
         <h3 className="meeting_heading">
           Въведение в планирането на велосипедни политики
         </h3>
         <div className="card_container">
           <Card
-            link="https://www.baatbg.org/uploads/docs/DCP3-320-3.1/NCWG1/velopolitiki.pdf"
+            link={baatUrl + "NCWG1/velopolitiki.pdf"}
             author="д-р Кирил Калоянов"
             title="Планиране на велосипедни политики на национално ниво"
           />
           <Card
-            link="https://www.baatbg.org/uploads/docs/DCP3-320-3.1/NCWG1/NationalDemand.pdf"
+            link={baatUrl + "NCWG1/NationalDemand.pdf"}
             author="Здравко Василев"
             title="Търсене на велосипедни маршрути от български туристи"
           />
           <Card
-            link="https://www.baatbg.org/uploads/docs/DCP3-320-3.1/NCWG1/ForeignDemand.pdf"
+            link={baatUrl + "NCWG1/ForeignDemand.pdf"}
             author="Деян Кателиев"
             title="Търсене на велосипедни маршрути от чуждестранни туристи"
           />
           <Card
-            link="http://www.baatbg.org//uploads/docs/DCP3-320-3.1/NCWG1/pravna.ramka.pdf"
+            link={baatUrl + "NCWG1/pravna.ramka.pdf"}
             author="арх. Петя Донева"
             title="Правна рамка на националния велосипеден план"
-          />
-        </div>
-        <hr />
-        <h3 className="section date">29 юни 2021</h3>
-        <h3 className="meeting_heading">
-          Велосипедни политики в страните от Дунавския регион
-        </h3>
-        <div className="card_container">
-          <Card
-            link="https://www.baatbg.org/uploads/docs/DCP3-320-3.1/NCWG2/Status.pdf"
-            author="Радостина Петрова"
-            title="Преглед на велополитики в България и в партньорските страни"
-          />
-          <Card
-            link="https://www.baatbg.org/uploads/docs/DCP3-320-3.1/NCWG2/Slovenia.pdf"
-            author="Gregor Steklačič"
-            title="Slovenia: Cycling development in the last 10 years"
-          />
-          <Card
-            link="https://www.baatbg.org/uploads/docs/DCP3-320-3.1/NCWG2/Hungary.pdf"
-            author="Miklòs Berencsi"
-            title="Cycling governance, infrastructure, tourism and funding in
-            Hungary"
-          />
-          <Card
-            link="http://www.baatbg.org//uploads/docs/DCP3-320-3.1/NCWG2/intr.pdf"
-            author="д-р Кирил Калоянов"
-            title="Национален велосипеден план"
-          />
-          <Card
-            link="http://www.baatbg.org//uploads/docs/DCP3-320-3.1/NCWG2/SUB.pdf"
-            author="Васил Маджирски"
-            title="Национална схема на велосипедни маршрути"
-          />
-        </div>
-        <hr />
-        <h3 className="section date">25 ноември 2021</h3>
-        <h3 className="meeting_heading">
-          Визия на национален велосипеден план
-        </h3>
-        <div className="card_container">
-          <Card
-            link="https://www.baatbg.org/uploads/docs/DCP3-320-3.1/NCWG3/BYPAD.pdf"
-            author="арх. Петя Донева и Радостина Петрова"
-            title="Одит на велосипедни политики по метода BYPAD"
-          />
-          <Card
-            link="https://www.baatbg.org/uploads/docs/DCP3-320-3.1/NCWG3/vision.pdf"
-            author="арх. Петя Донева"
-            title="Визия за политики за велосипеден транспорт, туризъм и спорт"
-          />
-          <Card
-            link="https://www.baatbg.org/uploads/docs/DCP3-320-3.1/NCWG3/velo.pdf"
-            author="Радостина Петрова"
-            title="Велосипедна инфарструктура извън урбанизирани територии в
-            България"
           />
         </div>
       </div>

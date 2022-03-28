@@ -54,8 +54,16 @@ class NavBar extends Component {
                 Конференция
               </Link>
             </div>
-            <div className="item">Посланици</div>
-            <div className="item">Библиотека</div>
+            <div className="item">
+              <Link to="ambassadors" className="menu_link" onClick={onReset}>
+                Посланици
+              </Link>
+            </div>
+            <div className="item">
+              <Link to="library" className="menu_link" onClick={onReset}>
+                Библиотека
+              </Link>
+            </div>
           </nav>
         </div>
       </header>

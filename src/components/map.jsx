@@ -1,6 +1,6 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from "react-leaflet";
-import mapData from "../data/data.json";
+import mapData from "../data/NatVelo.json";
 
 export default function Map() {
   return (

@@ -7,6 +7,8 @@ import NavBack from "./components/common/navback";
 import Map from "./components/map";
 import Partners from "./components/partners";
 import Conference from "./components/conference";
+import Ambassadors from "./components/ambassadors";
+import Library from "./components/library";
 import dtpLogo from "./components/images/logoDTP.png";
 
 class App extends React.Component {
@@ -88,6 +90,24 @@ class App extends React.Component {
               <>
                 <NavBack toggle={toggle} />
                 <Conference />
+              </>
+            }
+          />
+          <Route
+            path="ambassadors"
+            element={
+              <>
+                <NavBack toggle={toggle} />
+                <Ambassadors />
+              </>
+            }
+          />
+          <Route
+            path="library"
+            element={
+              <>
+                <NavBack toggle={toggle} />
+                <Library />
               </>
             }
           />

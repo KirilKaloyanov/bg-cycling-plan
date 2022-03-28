@@ -124,7 +124,7 @@ class Conference extends Component {
     return (
       <div className="form_container">
         <h2 className="align_center">Национална велосипедна конференция</h2>
-        <div className="text text_block">
+        <div className="text">
           <br />
           През м. октомври 2022 ще се проведе Национална велосипедна
           конференция. На нея ще бъдат обсъдени Националния велосипеден план и

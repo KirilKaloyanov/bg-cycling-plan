@@ -423,6 +423,27 @@ a {
   text-decoration-thickness: 1px;
 }
 
+/*  DOCUMENT  */ /*  DOCUMENT  */ /*  DOCUMENT  */ /*  DOCUMENT  */
+
+.document_card {
+  margin: 2rem;
+  width: 21rem;
+  height: 30rem;
+  border-radius: 5px;
+  box-shadow: 0 0 25px lightgrey;
+  background-image: url("./components/images/symbol.png");
+  background-size: cover;
+}
+
+.document_card:hover {
+  box-shadow: 0 0 25px grey;
+}
+
+.document_card_title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
 /*  FORM  */ /*  FORM  */ /*  FORM  */ /*  FORM  */ /*  FORM  */
 
 .form_container {
@@ -446,6 +467,13 @@ a {
 
 .input_error {
   color: red;
+}
+
+/*  VIDEO  */ /*  VIDEO  */ /*  VIDEO  */ /*  VIDEO  */ /*  VIDEO  */
+
+.video_container {
+  margin: auto;
+  width: 560px;
 }
 
 /*  FOOTER  */ /*  FOOTER  */ /*  FOOTER  */ /*  FOOTER  */
