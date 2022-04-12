@@ -147,7 +147,7 @@ class Conference extends Component {
         )}
         {!this.state.registrationId && (
           <form onSubmit={this.handleSubmit}>
-            <h3 className="align_center">форма за регистрация</h3>
+            <h3 className="align_center">Форма за регистрация</h3>
             {this.renderInput("firstName", "Име", firstName)}
             {this.renderInput("lastName", "Фамилия", lastName)}
             {this.renderInput("email", "E-mail", email)}

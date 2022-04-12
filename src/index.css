@@ -31,7 +31,12 @@ h2 {
   text-align: center;
 }
 
-/*  LINKS  */ /*  LINKS  */ /*  LINKS  */ /*  LINKS  */ /*  LINKS  */ /*  LINKS  */
+/*  LINKS  */
+/*  LINKS  */
+/*  LINKS  */
+/*  LINKS  */
+/*  LINKS  */
+/*  LINKS  */
 
 a {
   color: var(--color-body-text);
@@ -46,9 +51,14 @@ a {
   color: white;
 }
 
-/*  BUTTONS  */ /*  BUTTONS  */ /*  BUTTONS  */ /*  BUTTONS  */ /*  BUTTONS  */ /*  BUTTONS  */
+/*  BUTTONS  */
+/*  BUTTONS  */
+/*  BUTTONS  */
+/*  BUTTONS  */
+/*  BUTTONS  */
+/*  BUTTONS  */
 .btn_arrow {
-  margin: 0 230px 0 0;
+  margin: 0 23px 0 0;
   padding: 0 25px 0 0;
   border: 0;
   width: 170px;
@@ -75,7 +85,12 @@ a {
   background-color: lightgrey;
 }
 
-/*  NAVBAR  */ /*  NAVBAR  */ /*  NAVBAR  */ /*  NAVBAR  */ /*  NAVBAR  */ /*  NAVBAR  */
+/*  NAVBAR  */
+/*  NAVBAR  */
+/*  NAVBAR  */
+/*  NAVBAR  */
+/*  NAVBAR  */
+/*  NAVBAR  */
 .header {
   position: absolute;
   top: 0;
@@ -104,6 +119,7 @@ a {
   .container_hidden {
     display: none;
   }
+
   .container_ham {
     width: 100%;
   }
@@ -125,6 +141,7 @@ a {
     margin-top: 0;
     margin-right: 3rem;
   }
+
   .item {
     margin: 5px;
   }
@@ -143,7 +160,11 @@ a {
   }
 }
 
-/*  NAVBACK   */ /*  NAVBACK   */ /*  NAVBACK   */ /*  NAVBACK   */ /*  NAVBACK   */
+/*  NAVBACK   */
+/*  NAVBACK   */
+/*  NAVBACK   */
+/*  NAVBACK   */
+/*  NAVBACK   */
 
 .navback {
   position: relative;
@@ -159,11 +180,17 @@ a {
   background-color: var(--color-body-olive);
   padding-bottom: 0.002rem;
 }
+
 .menu_back .container_menu {
   color: var(--color-body-olive);
 }
 
-/*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */ /*  HERO  */
+/*  HERO  */
+/*  HERO  */
+/*  HERO  */
+/*  HERO  */
+/*  HERO  */
+/*  HERO  */
 
 .img_hero {
   position: relative;
@@ -242,7 +269,12 @@ a {
   }
 }
 
-/*  QUOTE  */ /*  QUOTE  */ /*  QUOTE  */ /*  QUOTE  */ /*  QUOTE  */ /*  QUOTE  */
+/*  QUOTE  */
+/*  QUOTE  */
+/*  QUOTE  */
+/*  QUOTE  */
+/*  QUOTE  */
+/*  QUOTE  */
 
 .grid {
   display: grid;
@@ -306,7 +338,11 @@ a {
   width: 80%;
 }
 
-/*  BLOCK  */ /*  BLOCK  */ /*  BLOCK  */ /*  BLOCK  */ /*  BLOCK  */
+/*  BLOCK  */
+/*  BLOCK  */
+/*  BLOCK  */
+/*  BLOCK  */
+/*  BLOCK  */
 
 .heading_block {
   text-align: center;
@@ -328,7 +364,11 @@ a {
   width: 80%;
 }
 
-/*  TEXT COLUMN  */ /*  TEXT COLUMN  */ /*  TEXT COLUMN  */ /*  TEXT COLUMN  */ /*  TEXT COLUMN  */
+/*  TEXT COLUMN  */
+/*  TEXT COLUMN  */
+/*  TEXT COLUMN  */
+/*  TEXT COLUMN  */
+/*  TEXT COLUMN  */
 
 .section {
   margin-top: 5rem;
@@ -367,7 +407,11 @@ a {
   column-rule: 1px solid var(--color-body-text);
 }
 
-/*  CARDS  */ /*  CARDS  */ /*  CARDS  */ /*  CARDS  */ /*  CARDS  */
+/*  CARDS  */
+/*  CARDS  */
+/*  CARDS  */
+/*  CARDS  */
+/*  CARDS  */
 
 .card_container {
   display: flex;
@@ -423,7 +467,10 @@ a {
   text-decoration-thickness: 1px;
 }
 
-/*  DOCUMENT  */ /*  DOCUMENT  */ /*  DOCUMENT  */ /*  DOCUMENT  */
+/*  DOCUMENT  */
+/*  DOCUMENT  */
+/*  DOCUMENT  */
+/*  DOCUMENT  */
 
 .document_card {
   margin: 2rem;
@@ -444,11 +491,22 @@ a {
   font-weight: 500;
 }
 
-/*  FORM  */ /*  FORM  */ /*  FORM  */ /*  FORM  */ /*  FORM  */
+/*  FORM  */
+/*  FORM  */
+/*  FORM  */
+/*  FORM  */
+/*  FORM  */
 
 .form_container {
   width: 48rem;
   margin: 2rem auto;
+}
+
+@media screen and (max-width: 500px) {
+  .form_container {
+    width: 30rem;
+    margin: 2rem auto;
+  }
 }
 
 .form_field_container {
@@ -469,14 +527,37 @@ a {
   color: red;
 }
 
-/*  VIDEO  */ /*  VIDEO  */ /*  VIDEO  */ /*  VIDEO  */ /*  VIDEO  */
+/*  VIDEO  */
+/*  VIDEO  */
+/*  VIDEO  */
+/*  VIDEO  */
+/*  VIDEO  */
 
 .video_container {
   margin: auto;
   width: 560px;
 }
+.video_container_yt {
+  width: 560px;
+  height: 315px;
+}
 
-/*  FOOTER  */ /*  FOOTER  */ /*  FOOTER  */ /*  FOOTER  */
+@media screen and (max-width: 500px) {
+  .video_container {
+    margin: auto;
+    width: 300px;
+  }
+  .video_container_yt {
+    width: 300px;
+    height: 168.75px;
+    
+  }
+}
+
+/*  FOOTER  */
+/*  FOOTER  */
+/*  FOOTER  */
+/*  FOOTER  */
 
 .dtpLogo {
   width: 20rem;
@@ -496,7 +577,11 @@ a {
   color: grey;
 }
 
-/*  PARTNERS  */ /*  PARTNERS  */ /*  PARTNERS  */ /*  PARTNERS  */ /*  PARTNERS  */
+/*  PARTNERS  */
+/*  PARTNERS  */
+/*  PARTNERS  */
+/*  PARTNERS  */
+/*  PARTNERS  */
 
 .logo {
   margin: 1rem;
@@ -506,7 +591,11 @@ a {
   height: 7rem;
 }
 
-/*  MAP  */ /*  MAP  */ /*  MAP  */ /*  MAP  */ /*  MAP  */
+/*  MAP  */
+/*  MAP  */
+/*  MAP  */
+/*  MAP  */
+/*  MAP  */
 
 #map {
   height: 18rem;
@@ -515,3 +604,4 @@ a {
 .leaflet-container {
   height: 500px;
 }
+
