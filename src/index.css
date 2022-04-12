@@ -92,7 +92,8 @@ a {
 /*  NAVBAR  */
 /*  NAVBAR  */
 .header {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   top: 0;
   width: 100%;
   max-width: 1300px;
@@ -597,11 +598,9 @@ a {
 /*  MAP  */
 /*  MAP  */
 
-#map {
-  height: 18rem;
-}
 
 .leaflet-container {
   height: 500px;
+  z-index: -1;
 }
 

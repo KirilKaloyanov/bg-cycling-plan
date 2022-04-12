@@ -52,7 +52,6 @@ class App extends React.Component {
           toggle={toggle}
           offsetY={offsetY}
           onToggle={this.setMenuVisibility}
-          onScroll={this.handleScroll}
           onReset={this.resetScroll}
         />
         <Routes>

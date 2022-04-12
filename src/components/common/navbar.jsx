@@ -7,10 +7,10 @@ class NavBar extends Component {
   render() {
     const { toggle, offsetY, onToggle, onReset } = this.props;
     const ham =
-      offsetY < 400
+      offsetY < 45
         ? {}
         : {
-            top: `${offsetY - 10}px`,
+            top: `${/*offsetY*/ -10}px`,
             backgroundColor: "#b8b883",
             maxWidth: "1300px",
           };
