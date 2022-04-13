@@ -213,7 +213,18 @@ a {
   font-weight: 200;
 }
 
+@media screen and (max-width: 460px) {
+  .img_hero {
+    height: 120%;
+  }
+}
+
 @media screen and (max-width: 500px) {
+
+  .img_hero {
+    transform: scaleX(-1);
+  }
+
   .copy {
     right: 9rem;
     top: 60px;
@@ -227,6 +238,10 @@ a {
 }
 
 @media screen and (min-width: 500px) and (max-width: 650px) {
+    .img_hero {
+    transform: scaleX(-1);
+  }
+  
   .copy {
     top: 60px;
     left: 50px;
@@ -240,9 +255,13 @@ a {
 }
 
 @media screen and (min-width: 650px) and (max-width: 840px) {
+  .img_hero {
+    transform: scaleX(-1);
+  }
+  
   .copy {
     top: 100px;
-    left: 180px;
+    left: 50px;
     right: 160px;
   }
 
