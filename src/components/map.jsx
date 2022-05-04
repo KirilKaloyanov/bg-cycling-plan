@@ -1,7 +1,14 @@
 import React from "react";
-import { MapContainer, TileLayer, Polyline, Popup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Polyline,
+  Popup,
+  GeoJSON,
+} from "react-leaflet";
 import ev13 from "../data/IronCurtainTrail10.js";
 import ev6 from "../data/DunavChernoMore2.js";
+import mapData from "../data/NatVelo.json";
 
 export default function Map() {
   function mapArrayToRoute(coordsData) {
@@ -21,7 +28,7 @@ export default function Map() {
 
   return (
     <div className="map_container">
-      <MapContainer center={[42.705, 25.09]} zoom={7.4} scrollWheelZoom={false}>
+      <MapContainer center={[42.705, 25.09]} zoom={7.4} scrollWheelZoom={true}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -39,6 +46,7 @@ export default function Map() {
         >
           <Popup>EuroVelo 13 - Пътят на Желязната завеса</Popup>
         </Polyline>
+        <GeoJSON data={mapData.features} />
       </MapContainer>
     </div>
   );
