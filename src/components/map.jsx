@@ -6,25 +6,17 @@ import {
   Popup,
   GeoJSON,
 } from "react-leaflet";
+import mapArrayToRoute from "../data/mapArrayToRoute.js";
 import ev13 from "../data/IronCurtainTrail10.js";
 import ev6 from "../data/DunavChernoMore2.js";
+import nat4 from "../data/Predbalkan4";
 import mapData from "../data/NatVelo.json";
 
 export default function Map() {
-  function mapArrayToRoute(coordsData) {
-    let lineArray = [];
-    for (let key of coordsData.features) {
-      let coordsArray = [];
-      for (let coords of key.geometry.coordinates) {
-        coordsArray.push([coords[1], coords[0]]);
-      }
-      lineArray.push(coordsArray);
-    }
-    return lineArray;
-  }
 
   let ev6Route = mapArrayToRoute(ev6);
   let ev13Route = mapArrayToRoute(ev13);
+  let nat4Route = mapArrayToRoute(nat4);
 
   return (
     <div className="map_container">
@@ -44,9 +36,15 @@ export default function Map() {
           pathOptions={{ color: "red", weight: 5 }}
           positions={ev13Route}
         >
-          <Popup>EuroVelo 13 - Пътят на Желязната завеса</Popup>
+          <Popup>Predbalkan</Popup>
         </Polyline>
-        <GeoJSON data={mapData.features} />
+        <Polyline
+          pathOptions={{ color: "green", weight: 5 }}
+          positions={nat4Route}
+        >
+          <Popup></Popup>
+        </Polyline>
+        {/* <GeoJSON data={mapData.features} /> */}
       </MapContainer>
     </div>
   );
