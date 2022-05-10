@@ -41,7 +41,7 @@ class NavBar extends Component {
             </div>
             <div className="item">
               <Link to="map" className="menu_link" onClick={onReset}>
-                Маршрути
+                Веломрежа
               </Link>
             </div>
             <div className="item">
