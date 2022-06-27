@@ -10,6 +10,7 @@ import mapArrayToRoute from "../data/mapArrayToRoute.js";
 import ev13 from "../data/IronCurtainTrail10.js";
 import ev6 from "../data/DunavChernoMore2.js";
 import nat4 from "../data/Predbalkan4";
+import nat5 from "../data/Ludogorie5";
 import nat6 from "../data/Podbalkanski6";
 import mapData from "../data/NatVelo.json";
 
@@ -18,6 +19,7 @@ export default function Map() {
   let ev6Route = mapArrayToRoute(ev6);
   let ev13Route = mapArrayToRoute(ev13);
   let nat4Route = mapArrayToRoute(nat4);
+  let nat5Route = mapArrayToRoute(nat5);
   let nat6Route = mapArrayToRoute(nat6);
 
   return (
@@ -51,6 +53,12 @@ export default function Map() {
           positions={nat6Route}
         >
           <Popup>Национален маршрут 6 - Подбалкански</Popup>
+        </Polyline>
+        <Polyline
+          pathOptions={{ color: "orange", weight: 5 }}
+          positions={nat5Route}
+        >
+          <Popup>Национален маршрут 5 - Лудогорие</Popup>
         </Polyline>
         {/* <GeoJSON data={mapData.features} /> */}
       </MapContainer>
