@@ -19,15 +19,15 @@ import nat8 from "../data/ViaDiagonalis8";
 import mapData from "../data/NatVelo.json";
 
 export default function Map() {
-  let nat1Route = mapArrayToRoute(nat1);
-  let ev6Route = mapArrayToRoute(ev6);
-  let ev13Route = mapArrayToRoute(ev13);
-  let nat3Route = mapArrayToRoute(nat3);
-  let nat4Route = mapArrayToRoute(nat4);
-  let nat5Route = mapArrayToRoute(nat5);
-  let nat6Route = mapArrayToRoute(nat6);
-  let nat7Route = mapArrayToRoute(nat7);
-  let nat8Route = mapArrayToRoute(nat8);
+  // let nat1Route = mapArrayToRoute(nat1);
+  // let ev6Route = mapArrayToRoute(ev6);
+  // let ev13Route = mapArrayToRoute(ev13);
+  // let nat3Route = mapArrayToRoute(nat3);
+  // let nat4Route = mapArrayToRoute(nat4);
+  // let nat5Route = mapArrayToRoute(nat5);
+  // let nat6Route = mapArrayToRoute(nat6);
+  // let nat7Route = mapArrayToRoute(nat7);
+  // let nat8Route = mapArrayToRoute(nat8);
 
   return (
     <div className="map_container">
