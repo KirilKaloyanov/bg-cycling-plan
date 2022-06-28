@@ -76,7 +76,7 @@ class App extends React.Component {
             }
           />
           <Route
-            path="94afG4qf3Rcp"
+            path="94afG4qf3Rcpasdf"
             element={
               <>
                 <NavBack toggle={toggle} />
