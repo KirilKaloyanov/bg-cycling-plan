@@ -43,12 +43,12 @@ export default function Map() {
         >
           <Popup>Национален маршрут 1 - Искър-Струма</Popup>
   </Polyline>*/}
-        <Polyline
+        {/* <Polyline
           pathOptions={{ color: "#3b83d1", weight: 5 }}
           positions={ev6Route}
         >
           <Popup>EuroVelo 6 - Дунавски велосипеден маршрут</Popup>
-        </Polyline>
+        </Polyline> */}
         {/*<Polyline
           pathOptions={{ color: "#d32f2f", weight: 5 }}
           positions={ev13Route}
