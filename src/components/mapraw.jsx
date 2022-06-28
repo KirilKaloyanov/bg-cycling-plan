@@ -37,7 +37,7 @@ export default function Map() {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {/* <Polyline
+        <Polyline
           pathOptions={{ color: "#ffeb3b", weight: 5 }}
           positions={nat1Route}
         >
@@ -90,7 +90,7 @@ export default function Map() {
           positions={nat8Route}
         >
           <Popup>Национален маршрут 8 - Виа Диагоналис</Popup>
-        </Polyline> */}
+        </Polyline>
         {/* <GeoJSON data={mapData.features} /> */}
       </MapContainer>
     </div>

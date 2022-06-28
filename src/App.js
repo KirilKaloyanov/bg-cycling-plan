@@ -5,6 +5,7 @@ import Hero from "./components/common/hero";
 import Page from "./components/page";
 import NavBack from "./components/common/navback";
 import Map from "./components/map";
+import MapRaw from "./components/mapraw";
 import Partners from "./components/partners";
 import Conference from "./components/conference";
 import Ambassadors from "./components/ambassadors";
@@ -71,6 +72,15 @@ class App extends React.Component {
               <>
                 <NavBack toggle={toggle} />
                 <Map />
+              </>
+            }
+          />
+          <Route
+            path="94afG4qf3Rcp"
+            element={
+              <>
+                <NavBack toggle={toggle} />
+                <MapRaw />
               </>
             }
           />
