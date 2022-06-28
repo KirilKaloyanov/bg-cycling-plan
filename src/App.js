@@ -75,7 +75,7 @@ class App extends React.Component {
               </>
             }
           />
-          <Route
+          {/* <Route
             path="94afG4qf3Rcpasdf"
             element={
               <>
@@ -83,7 +83,7 @@ class App extends React.Component {
                 <MapRaw />
               </>
             }
-          />
+          /> */}
           <Route
             path="partners"
             element={
