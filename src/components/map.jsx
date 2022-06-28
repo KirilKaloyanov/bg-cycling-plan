@@ -12,15 +12,16 @@ import ev6 from "../data/DunavChernoMore2.js";
 import nat4 from "../data/Predbalkan4";
 import nat5 from "../data/Ludogorie5";
 import nat6 from "../data/Podbalkanski6";
+import nat7 from "../data/Chernomorski7";
 import mapData from "../data/NatVelo.json";
 
 export default function Map() {
-
   let ev6Route = mapArrayToRoute(ev6);
   let ev13Route = mapArrayToRoute(ev13);
   let nat4Route = mapArrayToRoute(nat4);
   let nat5Route = mapArrayToRoute(nat5);
   let nat6Route = mapArrayToRoute(nat6);
+  let nat7Route = mapArrayToRoute(nat7);
 
   return (
     <div className="map_container">
@@ -31,7 +32,7 @@ export default function Map() {
         />
 
         <Polyline
-          pathOptions={{ color: "blue", weight: 5 }}
+          pathOptions={{ color: "#3b83d1", weight: 5 }}
           positions={ev6Route}
         >
           <Popup>EuroVelo 6 - Дунавски велосипеден маршрут</Popup>
@@ -49,16 +50,22 @@ export default function Map() {
           <Popup>Национален маршрут 4 - Предбалкан</Popup>
         </Polyline>
         <Polyline
+          pathOptions={{ color: "orange", weight: 5 }}
+          positions={nat5Route}
+        >
+          <Popup>Национален маршрут 5 - Лудогорие</Popup>
+        </Polyline>
+        <Polyline
           pathOptions={{ color: "violet", weight: 5 }}
           positions={nat6Route}
         >
           <Popup>Национален маршрут 6 - Подбалкански</Popup>
         </Polyline>
         <Polyline
-          pathOptions={{ color: "orange", weight: 5 }}
-          positions={nat5Route}
+          pathOptions={{ color: "#2042b3", weight: 5 }}
+          positions={nat7Route}
         >
-          <Popup>Национален маршрут 5 - Лудогорие</Popup>
+          <Popup>Национален маршрут 7 - Черноморски</Popup>
         </Polyline>
         {/* <GeoJSON data={mapData.features} /> */}
       </MapContainer>
